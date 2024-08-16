@@ -68,8 +68,8 @@ $menu_WIDTH: 150px;
     0.3s border-top-color;
 }
 
-.menu-title:hover { background: #8db842;       //Main menu background color changing after hover
-  }
+.menu-title:hover { background: #8db842;  }     //Main menu background color changing after hover
+
 .menu-title:hover:before { border-top-color: #8db842; }
 
 .menu:hover > .menu-title:before {
@@ -98,17 +98,17 @@ $menu_WIDTH: 150px;
   transition: 0.2s 0.2s border-bottom-width ease-out;
 }
 
-.menu-title_2nd { background: #DC143C; // background of title2 }
+.menu-title_2nd { background: #DC143C;  }// background of title2
 .menu-title_2nd:hover { background: #3e86a3; }
 .menu-title_2nd:before { border-top-color: #4e96b3; }
 .menu-title_2nd:hover:before { border-top-color: #3e86a3; }
 
-.menu-title_3rd { background: #00CED1; // background of title3 }
+.menu-title_3rd { background: #00CED1;  }// background of title3
 .menu-title_3rd:hover { background: #b96666; }
 .menu-title_3rd:before { border-top-color: #c97676; }
 .menu-title_3rd:hover:before { border-top-color: #b96666; }
 
-.menu-title_4th { background: #E9967A; // background of title4 }
+.menu-title_4th { background: #E9967A;  }// background of title4
 .menu-title_4th:hover { background: #cb9b48; }
 .menu-title_4th:before { border-top-color: #dbab58; }
 .menu-title_4th:hover:before { border-top-color: #cb9b48; }
@@ -189,8 +189,8 @@ $menu_WIDTH: 150px;
 
 .hList {
   //overflow: hidden;
-  list-style: none; //removing dots from the menu
-  @include web-background; //The @mixin that we can reused throughout the website.
+  list-style:    none; //removing dots from the menu
+  @incl        ude web-background; //The @mixin that we can reused throughout the website.
 }
 
 .hList > * {
@@ -199,4 +199,8 @@ $menu_WIDTH: 150px;
 
 .hList > * + * {
   margin-left: 0;
+}
+
+button {
+  color: blue;
 }

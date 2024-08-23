@@ -4,3 +4,11 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+/* Creating and Using Variables */
+body {
+    font-family: $fonts; /* variable usage */
+    background-color: $primary-color;
+    padding: $spacing;
+    min-height: 100vh;
+    @include flex-center(); /* using the mixins function */
+}

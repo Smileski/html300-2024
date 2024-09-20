@@ -2,6 +2,12 @@
 import { ref } from "vue";
 
 const text = ref("Hello Coders!!");
+
+function changeText(event) {
+  text.value = event.target.value;
+
+  const hyperlink = ref('https://vuejs.org/');
+}
 </script>
 
 <template>
@@ -14,6 +20,8 @@ const text = ref("Hello Coders!!");
       height="125"
     />
     <h1>{{ text }}</h1>
+    <a v-bind:href='hyperlink'>{{ hyperlink }} </a>
+    <input v-on:input="changeText" />
   </header>
 </template>
 

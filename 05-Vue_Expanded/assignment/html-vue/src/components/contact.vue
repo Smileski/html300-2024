@@ -19,10 +19,20 @@ const contactInfo = ref ([
 }
 ])
 </script>
+<script>
+//importing mixin for the image component that toggle on a border around the image
+import border from '@/mixins/border'
+import { defineProps, ref } from 'vue'
+export default {
+  mixins: [border]
+}
+</script>
 
 <template>
   <div class="contact">
     <h1>Contact Page</h1>
+    <!--mixins for toggle on/off border of a image-->
+    <img src="./images/analyse.jpg" id="tImage" alt="" @click="addBorder()" />
     <main>
         <ul>
             <li v-for='contact in contactInfo' :key='contact'>
@@ -37,6 +47,10 @@ const contactInfo = ref ([
 
 <style scoped>
 .contact {
+  text-align: center;
+  margin-top: 20px;
+}
+.img-mixin {
   text-align: center;
   margin-top: 20px;
 }

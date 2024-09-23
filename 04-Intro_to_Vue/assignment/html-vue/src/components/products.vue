@@ -3,16 +3,19 @@
 
 const image_option = [
   {
+    title: 'Design',
+    url: './images_folder/design.jpg',
+    alt: 'Deliver the best user experience with our cerefully designed responsive websites and applications.'
+  },
+  {
+    title: 'Development',
     url: './images_folder/develop.jpg',
-    alt: 'developing services'
+    alt: 'Custom Web App Development Built to Achieve Your Business Goals Web applications.'
   },
   {
+    title: 'Analytics',
     url: './images_folder/analyse.jpg',
-    alt: 'analysing'
-  },
-  {
-    url: './images_folder/consult.jpg',
-    alt: 'consulting services'
+    alt: 'The company analysis can help you figure out where your business is right now.'
   }
 ]
 </script>
@@ -23,7 +26,9 @@ const image_option = [
     <main>
       <ul>
         <li v-for="image in image_option" :src="image">
-          <img :src="image.url" :alt="image.alt" />
+          {{ image.title }}
+          <img :src="image.url" />
+          {{ image.alt }}
         </li>
       </ul>
     </main>
@@ -36,7 +41,7 @@ const image_option = [
   margin-top: 20px;
 }
 li {
-  width: 80px;
+  width: 250px;
   padding: 10px;
   margin: 10px;
   background-color: lightskyblue;

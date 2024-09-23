@@ -1,6 +1,14 @@
 <template>
+  <Slotcomp>
+    <template v-slot:header>
+      <h2>Header Slot</h2>
+    </template>
+    <template v-slot:footer>
+      <h2>Footer Slot</h2>
+    </template>
+  </Slotcomp>
   <div id="app">
-    <header>
+    <!-- <header>
       <slot-comp>
         <h2>The best solution for your business</h2>
         <h4>We help you maximize performance and build a healthy organization.</h4>
@@ -13,7 +21,7 @@
         <h2>Get in touch with us today!</h2>
         <h4>Send us a message and we will get back to you as soon as possible.</h4>
       </slot-comp>
-    </footer>
+    </footer> -->
 
     <component :is="currentView" />
   </div>
@@ -26,6 +34,7 @@ import About from './components/about.vue'
 import Products from './components/products.vue'
 import Services from './components/index.vue'
 import Contact from './components/contact.vue'
+import Slotcomp from './components.Slotcomp.vue'
 
 const routes = {
   '/about': About,

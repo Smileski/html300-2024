@@ -1,8 +1,15 @@
-<template>
-  <div><slot></slot></div>
-</template>
-
 <script></script>
+
+<template>
+  <header>
+    <h1>Header Slot</h1>
+    <slot name="header"></slot>
+  </header>
+  <main></main>
+  <footer>
+    <slot name="footer"></slot>
+  </footer>
+</template>
 
 <style scoped>
 div {
@@ -16,5 +23,10 @@ div {
 }
 div:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+footer {
+  border-top: 1px solid #ccc;
+  color: #666;
+  font-size: 0.8em;
 }
 </style>

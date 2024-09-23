@@ -35,7 +35,7 @@ const show = ref(true)
 
 <style scoped>
 .btn {
-  background-color: #04aa6d; /* Green */
+  background-color: rgb(161, 182, 182); /* dark gray */
   border: none;
   color: white;
   padding: 15px 32px;

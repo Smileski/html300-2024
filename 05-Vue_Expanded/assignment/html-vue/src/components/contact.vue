@@ -11,11 +11,6 @@ const contactInfo = ref([
     Email: 'maria_green@analyticsltd.com',
     Phone: '555-555-8431',
     Address: '1555 E Road Dr, Aurora, CO 80015'
-  },
-  {
-    Email: 'sofia_bella@analyticsltd.com',
-    Phone: '555-555-8431',
-    Address: '22333 E Mitten Dr, Aspen, CO 80015'
   }
 ])
 </script>
@@ -23,7 +18,6 @@ const contactInfo = ref([
 <script>
 //importing mixin for the image component that toggle on a border around the image
 import border from '@/mixins/border'
-import { defineProps, ref } from 'vue'
 export default {
   mixins: [border]
 }
@@ -34,8 +28,9 @@ export default {
   <div id="img-mixin">
     <img src="./images2/cont_1.jpg" id="tImage" alt="" @click="addBorder()" />
   </div>
+
   <div class="contact">
-    <h1>Contact Page</h1>
+    <h2>Contact Page</h2>
     <main>
       <ul>
         <li v-for="contact in contactInfo" :key="contact">
@@ -56,5 +51,11 @@ export default {
 .img-mixin {
   text-align: center;
   margin-top: 20px;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
 }
 </style>

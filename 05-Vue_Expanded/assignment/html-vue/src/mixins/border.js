@@ -1,19 +1,13 @@
 const border = {
   data() {
-    return { isActive: false }
+    return {
+      isActive: false
+    }
   },
-
-  //computed: {
-  //  classObj() {
-  //    return {
-  //      [this.state]: this.isActive
-  //    }
-  //  }
-  //},
   methods: {
     addBorder() {
-      this.isActive = this.isActive ? false : true
-      //document.getElementById('tImage').style.border = '5px solid black'
+      this.isActive = this.isActive ? false : true,
+      //this.$emit('toggle-state',this.isActive);
     }
   }
 }

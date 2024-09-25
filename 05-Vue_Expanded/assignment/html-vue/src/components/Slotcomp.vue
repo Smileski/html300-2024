@@ -2,31 +2,36 @@
 
 <template>
   <header>
-    <h1>Header Slot</h1>
     <slot name="header"></slot>
   </header>
-  <main></main>
+  <main name="main">
+    <slot></slot>
+  </main>
   <footer>
     <slot name="footer"></slot>
   </footer>
 </template>
 
 <style scoped>
-div {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  flex-basis: 150px;
-  border-radius: 10px;
-  border: solid black 2px;
-  margin: 10px;
-  padding: 0 10px 0;
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
 }
 div:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 footer {
-  border-top: 1px solid #ccc;
-  color: #666;
-  font-size: 0.8em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
 }
 </style>

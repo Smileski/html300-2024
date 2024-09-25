@@ -1,6 +1,7 @@
 <script setup>
 import { defineProps, ref } from 'vue'
 
+/* prop validation*/
 const props = defineProps({
   id: Number,
   title: String,
@@ -8,11 +9,13 @@ const props = defineProps({
   alt: String
 })
 </script>
+
 <template>
-  <div>
-    <h2>{{ title }}</h2>
-    <p>{{ url }}</p>
-    <p>{{ alt }}</p>
+  <!--Using class "post" for style-->
+  <div class="post">
+    <h2>{{ props.title }}</h2>
+    <p>{{ props.url }}</p>
+    <p>{{ props.alt }}</p>
   </div>
 </template>
 <style scoped>

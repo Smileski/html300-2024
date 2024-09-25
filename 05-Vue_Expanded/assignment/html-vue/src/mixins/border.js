@@ -6,7 +6,7 @@ const border = {
   },
   methods: {
     addBorder() {
-      this.isActive = this.isActive ? false : true,
+      this.isActive = this.isActive ? false : true
       //this.$emit('toggle-state',this.isActive);
     }
   }

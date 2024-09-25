@@ -1,5 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+//importing mixin for the image component that toggle on a border around the image
+import border from '@/mixins/border'
+import { defineProps, ref } from 'vue'
 
 const contactInfo = ref([
   {
@@ -14,10 +16,7 @@ const contactInfo = ref([
   }
 ])
 </script>
-
 <script>
-//importing mixin for the image component that toggle on a border around the image
-import border from '@/mixins/border'
 export default {
   mixins: [border]
 }
@@ -26,7 +25,7 @@ export default {
 <template>
   <!--mixins for toggle on/off border of a image-->
   <div id="img-mixin">
-    <img src="./images2/cont_1.jpg" id="tImage" alt="" @click="addBorder()" />
+    <img src="./images2/cont_1.jpg" id="tImage" alt="" @click="addBorder()" :class="classObj" />
   </div>
 
   <div class="contact">

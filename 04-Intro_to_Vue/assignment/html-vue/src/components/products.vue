@@ -1,30 +1,50 @@
 <script setup>
-import { ref } from "vue";
-import img1 from "./images/develop.jpg";
-import img2 from "./images/analyse.jpg";
-import img3 from "./images/develop.jpg";
-const name = ref ("products");
-const images = ref(['img1', 'img2', 'img3']);
+//import { ref } from 'vue'
+
+const image_option = [
+  {
+    title: 'Design',
+    url: './images_folder/design.jpg',
+    alt: 'Deliver the best user experience with our cerefully designed responsive websites and applications.'
+  },
+  {
+    title: 'Development',
+    url: './images_folder/develop.jpg',
+    alt: 'Custom Web App Development Built to Achieve Your Business Goals Web applications.'
+  },
+  {
+    title: 'Analytics',
+    url: './images_folder/analyse.jpg',
+    alt: 'The company analysis can help you figure out where your business is right now.'
+  }
+]
 </script>
 
 <template>
-  <div class="contact">
-    <h1>Product Page</h1>
-    <img :src="img1">
+  <div id="img_">
+    <h1>Image Page</h1>
     <main>
-        <ul>
-            <li v-for='image in images' :key='image'>
-              <img :src='image'>
-              {{ image }}
-            </li>
-        </ul>
+      <ul>
+        <li v-for="image in image_option" :src="image">
+          {{ image.title }}
+          <img :src="image.url" />
+          {{ image.alt }}
+        </li>
+      </ul>
     </main>
   </div>
 </template>
 
 <style scoped>
-.products {
+.img_ {
   text-align: center;
   margin-top: 20px;
+}
+li {
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightskyblue;
+  border-radius: 5px;
 }
 </style>

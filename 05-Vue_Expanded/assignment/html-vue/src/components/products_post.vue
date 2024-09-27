@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref } from 'vue'
+import { defineProps } from 'vue'
 
 /* prop validation*/
 const props = defineProps({
@@ -14,9 +14,10 @@ const props = defineProps({
   <!--Using class "post" for style-->
   <div class="post">
     <h2>{{ props.title }}</h2>
-    <p>{{ props.url }}</p>
+    <img :src="props.url" alt="develop" />
     <p>{{ props.alt }}</p>
   </div>
+  <!-- <img src="./images2/develop.jpg" alt="develop" /> -->
 </template>
 <style scoped>
 .post {

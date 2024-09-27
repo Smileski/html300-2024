@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
+import ClickCounter from './components/ClickCounter.vue'
 
 import About from './components/about.vue'
 import Products from './components/products.vue'
@@ -24,6 +25,15 @@ const currentView = computed(() => {
   return routes[currentPath.value.slice(1) || '/']
 })
 </script>
+<!-- <script>
+export default {
+  name: 'App',
+  components: {
+    ClickCounter
+  }
+}
+</script> -->
+
 <template>
   <Slotcomp>
     <!--using slot for header component-->
@@ -42,6 +52,7 @@ const currentView = computed(() => {
     <a href="#/contact">Contact</a>
     <component :is="currentView" />
   </div>
+  <!-- <ClickCounter></ClickCounter> -->
 </template>
 
 <style scoped>

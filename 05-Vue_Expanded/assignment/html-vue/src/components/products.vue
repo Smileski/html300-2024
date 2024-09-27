@@ -6,7 +6,7 @@ const data = ref([
   {
     id: 1,
     title: 'Design',
-    url: '@/images/design.jpg',
+    url: './images/design.jpg',
     alt: 'Deliver the best user experience with our cerefully designed responsive websites and applications.We Begin With Your Strategy and Vision To deliver a UI/UX design that serves your purpose, we start with a discovery process that helps us understand your vision and strategy. This process includes analyzing your existing products, interviewing stakeholders, and gathering as much information as we can. From there we can develop written requirements outlining how the solution will serve as the foundation of the design.'
   },
   {

@@ -1,7 +1,8 @@
 <script setup>
 //importing mixin for the image component that toggle on a border around the image
-import border from '@/mixins/border'
-import { defineProps, ref } from 'vue'
+import { addBorder } from '@/composable/addBorder'
+//import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 
 const contactInfo = ref([
   {
@@ -17,15 +18,19 @@ const contactInfo = ref([
 ])
 </script>
 <script>
-export default {
-  mixins: [border]
-}
+const { show } = addBorder()
 </script>
 
 <template>
-  <!--mixins for toggle on/off border of a image-->
-  <div id="img-mixin">
-    <img src="./images2/cont_1.jpg" id="tImage" alt="" @click="addBorder()" :class="classObj" />
+  <!--composable for toggle on/off border of a image-->
+  <div>
+    <img
+      src="./images2/develop.jpg"
+      alt="develop"
+      @click="show = !show"
+      :class="{ active: show }"
+      class="nav-item dropdown"
+    />
   </div>
 
   <div class="contact">
@@ -47,14 +52,21 @@ export default {
   text-align: center;
   margin-top: 20px;
 }
-.img-mixin {
+/* .img-mixin {
   text-align: center;
   margin-top: 20px;
-}
+  border: green solid 2px;
+} */
+/* .is-active {
+  border: green solid 2px;
+} */
 h1,
 h2,
 h3,
 h4 {
   text-align: center;
+}
+.active {
+  border: 5px solid #555;
 }
 </style>
